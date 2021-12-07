@@ -1,0 +1,100 @@
+<h1 class="mt-4">Usuário</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">{{usuario.id? 'Edição' : 'Cadastro'}}</li>
+</ol>
+
+<div class="container">
+    <form #usuarioForm="ngForm" (ngSubmit)="gravarUsuario()">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf="sucesso == true">
+                    Usuário salvo/atualizado com sucesso!
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger" role="alert" *ngFor="let meuErro of errosApi">
+                    {{ meuErro }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>ID:</label>
+                    <input type="text" class="form-control" disabled=true [(ngModel)]="usuario.id" name="id">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nome:*</label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.nome" name="nome">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>CPF:</label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.cpf" name="cpf">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nome usuário:</label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.nomeUsuario" name="nomeUsuario">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Senha: </label>
+                    <input type="text" class="form-control" disabled=true [(ngModel)]="usuario.senha" name="senha">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Função:</label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.funcao" name="funcao">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Setor: </label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.setor" name="setor">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Empresa: </label>
+                    <input type="text" class="form-control" [(ngModel)]="usuario.empresa" name="empresa">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary" *ngIf="!usuario.id">
+                    <i class="fa fa-save"></i>
+                    Salvar
+                </button>
+
+                <button type="submit" class="btn btn-primary" *ngIf="usuario.id">
+                    <i class="fa fa-sync-alt"></i>
+                    Atualizar
+                </button>
+
+                <button type="button" class="btn btn-danger ml-1" (click)="voltarListagem()">
+                    <i class="fa fa-arrow-alt-circle-left"></i>
+                    Voltar
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
