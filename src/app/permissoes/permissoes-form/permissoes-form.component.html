@@ -1,0 +1,38 @@
+<h1 class="mt-4">Permissões</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Cadastro</li>
+</ol>
+
+<div class="container">
+    <form #form="ngForm" (submit)="onSubmit()">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Usuário</label>
+                    <select class="form-control">
+                        <option value="">Selecione..</option>
+                        <option *ngFor="let meuUsuario of usuarios" [ngValue]="meuUsuario.id">
+                            {{ meuUsuario.nome }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Módulo Software</label>
+                    <select class="form-control">
+                        <option value="">Selecione..</option>
+                        <option *ngFor="let moduloSoftware of moduloSoftware" [ngValue]="moduloSoftware.id">
+                            {{ moduloSoftware.nome }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>        
+
+    </form>
+</div>

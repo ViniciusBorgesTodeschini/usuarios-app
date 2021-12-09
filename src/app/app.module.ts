@@ -9,6 +9,7 @@ import { TemplateModule } from './template/template.module';
 import { HomeComponent } from './home/home.component'
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { UsuariosService } from './usuarios.service';
+import { PermissoesModule } from './permissoes/permissoes.module';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,8 @@ import { UsuariosService } from './usuarios.service';
     HttpClientModule,
     AppRoutingModule,
     TemplateModule,
-    UsuariosModule
-   
+    UsuariosModule,
+    PermissoesModule
   ],
   providers: [
     UsuariosService
