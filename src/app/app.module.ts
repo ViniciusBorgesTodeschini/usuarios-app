@@ -12,6 +12,7 @@ import { UsuariosService } from './usuarios.service';
 import { PermissoesModule } from './permissoes/permissoes.module';
 import { SoftwareModule } from './software/software.module';
 import { SoftwareService } from './software.service';
+import { PermissoesService } from './permissoes.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SoftwareService } from './software.service';
   ],
   providers: [
     UsuariosService,
-    SoftwareService
+    SoftwareService,
+    PermissoesService
   ],
   bootstrap: [AppComponent]
 })

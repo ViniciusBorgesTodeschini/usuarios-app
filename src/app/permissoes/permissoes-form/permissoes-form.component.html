@@ -8,9 +8,22 @@
 
         <div class="row">
             <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf="sucesso == true">
+                    Permissão salva/atualizada com sucesso!
+                </div>
+
+                <div class="alert alert-danger" role="alert" *ngFor="let meuErro of errosApi">
+                    {{ meuErro }}
+                </div>                
+            </div>
+        </div>        
+
+        <div class="row">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label>Usuário</label>
-                    <select class="form-control">
+                    <select class="form-control" [ngModelOptions]="{standalone: true}"
+                        [(ngModel)]="permissoes.idUsuario">
                         <option value="">Selecione..</option>
                         <option *ngFor="let meuUsuario of usuarios" [ngValue]="meuUsuario.id">
                             {{ meuUsuario.nome }}
@@ -20,7 +33,41 @@
             </div>
         </div>
 
-             
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Módulo</label>
+                    <select class="form-control" [ngModelOptions]="{standalone: true}"
+                        [(ngModel)]="permissoes.idModuloSoftware">
+                        <option value="">Selecione..</option>
+                        <option *ngFor="let meuSoftware of software" [ngValue]="meuSoftware.id">
+                            {{meuSoftware.nomeSoftware}} - {{ meuSoftware.nome }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Nome: </label>
+                    <input class="form-control" [(ngModel)]="permissoes.nome" type="text" name="nome" id="inputNome">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-success">
+                    <i class="fa fa-save"></i>Salvar
+                </button>
+
+                <button type="button" class="btn btn-danger ml-1" routerLink="/permissoesLista">
+                    <i class="fa fa-arrow-alt-circle-left"></i>Voltar
+                </button>                
+            </div>
+        </div>        
 
     </form>
 </div>
