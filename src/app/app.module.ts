@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component'
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { UsuariosService } from './usuarios.service';
 import { PermissoesModule } from './permissoes/permissoes.module';
+import { SoftwareModule } from './software/software.module';
+import { SoftwareService } from './software.service';
 
 @NgModule({
   declarations: [
@@ -22,10 +24,12 @@ import { PermissoesModule } from './permissoes/permissoes.module';
     AppRoutingModule,
     TemplateModule,
     UsuariosModule,
-    PermissoesModule
+    PermissoesModule,
+    SoftwareModule
   ],
   providers: [
-    UsuariosService
+    UsuariosService,
+    SoftwareService
   ],
   bootstrap: [AppComponent]
 })
