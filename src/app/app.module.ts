@@ -24,9 +24,9 @@ import { PermissoesService } from './permissoes.service';
     HttpClientModule,
     AppRoutingModule,
     TemplateModule,
-    UsuariosModule,
-    PermissoesModule,
-    SoftwareModule
+    UsuariosModule,    
+    SoftwareModule,
+    PermissoesModule
   ],
   providers: [
     UsuariosService,

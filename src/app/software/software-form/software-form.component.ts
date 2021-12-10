@@ -20,9 +20,6 @@ export class SoftwareFormComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute) {
     this.software = new Software();
-    /*this.software.id = 1;
-    this.software.nomeSoftware = "BethaCode System";
-    this.software.nome = "Contábil";*/
   }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 export class Permissoes{
-    id : number;
+    //id : number;
     idUsuario : number;
     idModuloSoftware : number;
     nome : String;

@@ -44,11 +44,10 @@ export class PermissoesFormComponent implements OnInit {
         this.sucesso = true;
         this.errosApi = null;
         this.permissoes = new Permissoes();        
-      }), respostaErro =>{
+      }, respostaErro =>{
         this.errosApi = respostaErro.error.erros;
         this.sucesso = false;
-      }
-
+      })
   }
 
 }

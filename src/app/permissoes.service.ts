@@ -10,7 +10,8 @@ import { permissoesBusca } from './permissoes/permissoes-lista/permissoesBusca';
 })
 export class PermissoesService {
 
-  apiURL: string = environment.apiURLBase + "/api/permissoes"
+  apiURL: string = environment.apiURLBase + "/api/permissoes";
+
   constructor(private http : HttpClient) { }
 
   salvar(permissoes : Permissoes) : Observable<Permissoes>{
