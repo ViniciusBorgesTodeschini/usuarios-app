@@ -7,8 +7,4 @@ export class Usuarios {
    funcao: string;
    setor: string;
    empresa: string;
-   /* private Boolean alteraDados; //2
-    private Boolean alteraSenha; //2
-    private Boolean alteraLogin; //2
-    private Boolean redefineSenha; //2*/
 }

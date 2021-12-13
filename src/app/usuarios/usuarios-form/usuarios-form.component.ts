@@ -20,20 +20,6 @@ export class UsuariosFormComponent implements OnInit {
     private router: Router,
     private activateRoute: ActivatedRoute) {
     this.usuario = new Usuarios();
-
-    /*this.usuario.id = 1; 
-    this.usuario.nome = "Usuario teste";
-    this.usuario.cpf = "777.777.777-77";
-    this.usuario.nomeUsuario = "usuarioTeste";
-    //senha: string -- autom
-    this.usuario.funcao = "função teste";
-    this.usuario.setor = "setor teste";
-    this.usuario.empresa = "empresa teste";
-    /* private Boolean alteraDados; //2
-     private Boolean alteraSenha; //2
-     private Boolean alteraLogin; //2
-     private Boolean redefineSenha; //2*/
-
   }
 
   ngOnInit(): void {
